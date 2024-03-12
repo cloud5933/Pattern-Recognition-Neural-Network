@@ -64,7 +64,7 @@ lr = 0.001
 
 training = True
 
-def preceptron(input_, expected, w, lr):
+def perceptron(input_, expected, w, lr):
     global training
     if w == []:
         for i in range(len(input_)):
@@ -82,9 +82,9 @@ def preceptron(input_, expected, w, lr):
 times = 0
 
 while training:
-    if (preceptron(one, 1, w, lr) == preceptron(two, 2, w, lr) == preceptron(three, 3, w2, lr) ==
-    preceptron(four, 4, w2, lr) == preceptron(circle, 5, w3, lr) == preceptron(triangle, 6, w3, lr) ==
-    preceptron(heart, 7, w4, lr) == 0):
+    if (perceptron(one, 1, w, lr) == perceptron(two, 2, w, lr) == perceptron(three, 3, w2, lr) ==
+    perceptron(four, 4, w2, lr) == perceptron(circle, 5, w3, lr) == perceptron(triangle, 6, w3, lr) ==
+    perceptron(heart, 7, w4, lr) == 0):
         training = False
     times += 1
     if times >= 10000:
